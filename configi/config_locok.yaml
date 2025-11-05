@@ -1,0 +1,6 @@
+package_name: "local-pack"
+repository_url: ""
+test_path: "./test"
+mode: "file"
+output: false
+max_depth: 4

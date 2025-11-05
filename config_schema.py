@@ -4,8 +4,7 @@ from dataclasses import dataclass
 class Config:
     package_name: str
     repository_url: str
-    test_repo_path: str
+    test_path: str
     mode: str
-    output_image: str
-    ascii_output: bool
+    output: bool
     max_depth: int

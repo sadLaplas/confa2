@@ -1,22 +1,21 @@
 import os
 
-def validate_config(data: dict):
+def validate_config(config: dict):
     required = [
-        "package_name", "repository_url", "test_repo_path", "mode",
-        "output_image", "ascii_output", "max_depth"
+        "package_name", "repository_url", "test_path", "mode", "output", "max_depth"
     ]
     for key in required:
-        if key not in data:
+        if key not in config:
             raise KeyError(f"Отсутствует обязательный параметр: {key}")
 
-    if data["mode"] not in ("url", "file"):
+    if config["mode"] not in ("url", "file"):
         raise ValueError("Параметр 'mode' должен быть 'url' или 'file'.")
 
-    if not isinstance(data["ascii_output"], bool):
+    if not isinstance(config["output"], bool):
         raise TypeError("Параметр 'ascii_output' должен быть логическим значением true/false.")
 
-    if not isinstance(data["max_depth"], int) or data["max_depth"] <= 0:
+    if not isinstance(config["max_depth"], int) or config["max_depth"] <= 0:
         raise ValueError("Параметр 'max_depth' должен быть положительным числом.")
 
-    if data["mode"] == "file" and not os.path.exists(data["test_repo_path"]):
-        raise FileNotFoundError(f"Путь '{data['test_repo_path']}' не существует.")
+    if config["mode"] == "file" and not os.path.exists(config["test_path"]):
+        raise FileNotFoundError(f"Путь '{config['test_path']}' не существует.")

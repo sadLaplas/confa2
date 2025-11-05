@@ -1,7 +1,6 @@
 package_name: "example-package"
 repository_url: "https://example.com/repo"
-test_repo_path: "./test_repo"
+test_path: "./test"
 mode: "remote"          # только url or file
-output_image: "deps_graph.png"
-ascii_output: false
+output: false
 max_depth: 3

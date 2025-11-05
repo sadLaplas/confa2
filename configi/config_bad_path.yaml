@@ -1,7 +1,6 @@
 package_name: "local-package"
 repository_url: ""
-test_repo_path: "./not_exists_dir"
+test_path: "./abracadabra"
 mode: "file"
-output_image: "deps_graph.png"
-ascii_output: true
+output: true
 max_depth: 2
