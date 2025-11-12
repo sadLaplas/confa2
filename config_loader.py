@@ -11,6 +11,6 @@ def load_config(path: str) -> Config:
     except yaml.YAMLError as e:
         raise ValueError(f"Ошибка разбора YAML: {e}")
 
-    validate_config(data)
+    validate_config(data) 
 
     return Config(**data)

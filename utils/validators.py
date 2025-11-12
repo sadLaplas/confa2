@@ -11,8 +11,8 @@ def validate_config(config: dict):
     if config["mode"] not in ("url", "file"):
         raise ValueError("Параметр 'mode' должен быть 'url' или 'file'.")
 
-    if not isinstance(config["output"], bool):
-        raise TypeError("Параметр 'ascii_output' должен быть логическим значением true/false.")
+    if config["output"] not in [True, False]:
+        raise TypeError("Параметр 'output' должен быть логическим значением true/false.")
 
     if not isinstance(config["max_depth"], int) or config["max_depth"] <= 0:
         raise ValueError("Параметр 'max_depth' должен быть положительным числом.")

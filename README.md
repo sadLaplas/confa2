@@ -1,7 +1,5 @@
 Первый этап 6 варианта работы. Инструмент визуализации графа зависимостей для менеджера пакетов, пока пустышки
 Минимальное CLI-приложение которое настраиваемое
- python main.py --config configi/config_non.yaml
- python main.py --config configi/config_ok.yaml 
- python main.py --config configi/config_bad_path.yaml 
- python main.py --config configi/config_invalid_type.yaml 
- python main.py --config configi/config_invalid_mode.yaml 
+Приложение для вывода пакетов по запросу пользователя при наличии входных данных, а именно url репозиторий
+python main.py --config configi/coo2.yaml       
+python main.py --config configi/coo.yaml       

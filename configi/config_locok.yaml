@@ -1,4 +1,4 @@
-package_name: "local-pack"
+package_name: "local-package"
 repository_url: ""
 test_path: "./test"
 mode: "file"

@@ -1,0 +1,7 @@
+package_name: "bash"
+repository_url: "http://archive.ubuntu.com/ubuntu/dists/noble/main/binary-amd64"
+mode: "url"
+output_image: "graph.png"
+output: false
+max_depth: 2
+test_path: "./local_repo"
